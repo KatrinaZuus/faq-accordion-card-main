@@ -6,7 +6,7 @@
     font-family: Kumbh Sans, sans-serif;
 }
 
-.container {
+.main {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -107,10 +107,15 @@ flex-direction: row;
     margin: 16px 0 19px;
   }
 
+  .desktop-illustration {
+    display: none;
+  }
+
 
   @media screen and (min-width: 1440px){
     .desktop {
         display: flex;
+        
     }
     
     .mobile {
@@ -119,9 +124,23 @@ flex-direction: row;
 
     .img {
         position: relative;
+        
     }
 
+    .desktop-illustration {
+        display: block;
+        position: absolute;
+        margin-left: -925px;
+        margin-top: 300px;
+        overflow: visible;
+    }
+
+
     .container {
+        overflow: hidden;
+    }
+
+    .main {    
         flex-direction: row;
     }
 
@@ -133,7 +152,7 @@ flex-direction: row;
 
     .desktop-shadow {
         position: absolute;
-        margin-top: -492px;
+        margin-top: -180px;
         height: auto;
         width: auto;
         margin-left: -580px;
@@ -143,15 +162,10 @@ flex-direction: row;
         position: absolute;
         margin: 70px 0 80px;
         margin-left: -85px;
-        margin-top: -120px;
+        margin-top: 220px;
     }
 
-    .desktop-illustration {
-        position: absolute;
-        margin-left: -99px;
-        margin-top: 20px;
-    }
-
+ 
     .q-a, .line {
         margin-left: 475px;
         width: 350px;
