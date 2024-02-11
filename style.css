@@ -65,10 +65,12 @@ h1 {
 }
 
 .q-a {
-display: flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    
+    margin: auto;
+   
 }
-
 
 .question{
     font-size: 13px;
@@ -76,6 +78,7 @@ flex-direction: row;
     cursor: pointer;
     border: none;
     background-color: #fff;
+    text-align: left;
 }
 
 .answer {
