@@ -2,39 +2,51 @@
 
 const btn = Array.from(document.getElementsByClassName("question"));
 const answr = Array.from(document.getElementsByClassName("answer"));
-const divQuestionAnsver = Array.from(document.getElementsByClassName("q-a"))
+const arrow = document.querySelector(".q-a img")
 
-let questionAnsver = "none"
+
+// let questionAnsver = "none"
 
 // for (i=0; i<=answr.length; i++) {
 
-//   btnClick=btn[i]
-//   questionAnsver=divQuestionAnsver[i].nextElementSibling
-//   console.log(btnClick)
-//   console.log(questionAnsver)
-   
-//   btnClick.addEventListener("click", ()=>{
-//     questionAnsver.style.display = "block"
-//   })
+//   x=`${i}`
+//   console.log(x)
 
-//   btn[i].addEventListener("click", ()=>{
-//     answr[0].style.display="block"
-//    })
+//   btn[x].addEventListener("click", ()=>{
+    
+//     answr[x].style.display = "block"
+
+  // btnClick=btn[i]
+  // questionAnsver=divQuestionAnsver[i].nextElementSibling
+  // console.log(btnClick)
+  // console.log(questionAnsver)
+   
+  // btnClick.addEventListener("click", ()=>{
+    // questionAnsver.style.display = "block"
+
+  // })
+
+  
+  //  })
 
 
 // }
 
-answerItem = "none"
+
 
 btn.forEach ((button)=>{
+
   button.addEventListener("click", ()=>{
-    answerItem = button.parentElement.nextSibling
-    console.log(button.parentElement)
-    console.log(answerItem
-      )
-    button.parentElement.nextSibling.style.display = "block"
-  })
+    answerItem = button.parentElement.nextElementSibling
+    arrowItem = button.nextElementSibling
+      answerItem.style.display = "block"
+      button.style.color = "black"
+      button.style.fontWeight = "700"
+      arrowItem.style.transform = "rotate(180deg)"
+
+      })
 })
+
 
 
 

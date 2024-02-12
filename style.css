@@ -178,4 +178,11 @@ h1 {
         margin-top: -15px;
         margin-left: 130px;
     }
+
+    .answer {
+        width: 35%;
+        margin: 12px 470px 16px;
+        color: #787887;
+        text-align: left;
+    }
   }
