@@ -1,8 +1,45 @@
 
 
 const btn = Array.from(document.getElementsByClassName("question"));
-const answr = Array.from(document.getElementsByClassName("answer"));
-const arrow = document.querySelector(".q-a img")
+// arrowItem = button.nextElementSibling
+let active = null  
+
+btn.forEach ((button)=>{
+  
+
+  button.addEventListener("click", ()=>{
+    if (button == active){
+      button.parentElement.nextElementSibling.style.display = "none";
+      active = null;
+      
+    } else 
+      if (active != null){
+      active.parentElement.nextElementSibling.style.display = "none";
+      active.nextElementSibling.style.transform = "rotate(0deg)";
+      active.style.color = "#787887";
+      active.style.fontWeight = "400";
+  
+    }
+    
+     button.parentElement.nextElementSibling.style.display = "block";
+     button.nextElementSibling.style.transform = "rotate(180deg)";
+     button.style.color = "black";
+     button.style.fontWeight = "700"
+        active = button;
+  
+  })
+    
+})
+
+
+
+
+// button.style.color = "black"
+//       button.style.fontWeight = "700"
+//       arrowItem.style.transform = "rotate(180deg)"
+// button.style.color =  "#787887";
+//       button.style.fontWeight = "400"
+//       arrowItem.style.transform = "rotate(180deg)"
 
 
 // let questionAnsver = "none"
@@ -31,32 +68,3 @@ const arrow = document.querySelector(".q-a img")
 
 
 // }
-
-
-
-btn.forEach ((button)=>{
-
-  button.addEventListener("click", ()=>{
-    answerItem = button.parentElement.nextElementSibling
-    arrowItem = button.nextElementSibling
-      answerItem.style.display = "block"
-      button.style.color = "black"
-      button.style.fontWeight = "700"
-      arrowItem.style.transform = "rotate(180deg)"
-
-      })
-})
-
-
-
-
-
- 
-
-
-   
-
-  
-
-// TypeError: Cannot read properties of undefined (reading 'nextElementSibling')
-// TypeError: Cannot read properties of undefined (reading 'nextElementSibling')
