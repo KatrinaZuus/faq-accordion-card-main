@@ -1,18 +1,20 @@
 
 
 const btn = Array.from(document.getElementsByClassName("question"));
+const arrow = document.getElementsByClassName("arrow")
 // arrowItem = button.nextElementSibling
-let active = null  
+let active = null;
 
 btn.forEach ((button)=>{
-  
-
   button.addEventListener("click", ()=>{
     if (button == active){
       button.parentElement.nextElementSibling.style.display = "none";
+      active.nextElementSibling.style.transform = "rotate(0deg)";
+      active.style.color = "#787887";
+      active.style.fontWeight = "400"
       active = null;
       
-    } else 
+    } else {
       if (active != null){
       active.parentElement.nextElementSibling.style.display = "none";
       active.nextElementSibling.style.transform = "rotate(0deg)";
@@ -26,6 +28,7 @@ btn.forEach ((button)=>{
      button.style.color = "black";
      button.style.fontWeight = "700"
         active = button;
+  }
   
   })
     
